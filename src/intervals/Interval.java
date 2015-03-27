@@ -5,8 +5,8 @@ public class Interval {
 	private double minimum;
 	private double maximum;
 	private OpeningType openingType;
-	
-	public Interval(Opening opening){
+
+	public Interval(Opening opening) {
 		this.openingType = opening.getType();
 	}
 
@@ -22,7 +22,7 @@ public class Interval {
 		this.minimum = minimum;
 		this.maximum = maximum;
 		this.openingType = opening.getType();
-	} 
+	}
 
 	public double midPoint() {
 		return (maximum + minimum) / 2;
@@ -44,17 +44,45 @@ public class Interval {
 	}
 
 	public boolean includes(Interval interval) {
-		if (this.openingType.getOpening().equals(interval.openingType.getOpening())) {
+		if (this.openingType.getOpening().equals(
+				interval.openingType.getOpening())
+				|| this.getOpening().equals(Opening.UNOPENED)
+				|| interval.getOpening().equals(Opening.BOTH_OPENED)) {
 			return interval.minimum >= minimum && interval.maximum <= maximum;
 		} else {
-			if ((this.openingType.getOpening().equals(Opening.BOTH_OPENED)
-					&& interval.openingType.getOpening().equals(Opening.UNOPENED) || (interval.openingType.getOpening()
-					.equals(Opening.BOTH_OPENED) && this.openingType.getOpening()
-					.equals(Opening.UNOPENED)))) {
+			if ((this.openingType.getOpening().equals(Opening.BOTH_OPENED) && interval.openingType
+					.getOpening().equals(Opening.UNOPENED))) {
 				return interval.minimum > minimum && interval.maximum < maximum;
-			}
+			} else if ((this.openingType.getOpening().equals(
+					Opening.BOTH_OPENED) && interval.getOpening().equals(
+					Opening.LEFT_OPENED))
+					|| (this.openingType.getOpening().equals(
+							Opening.RIGHT_OPENED) && interval.getOpening()
+							.equals(Opening.UNOPENED))
+					|| (this.openingType.getOpening().equals(
+							Opening.RIGHT_OPENED) && interval.openingType
+							.getOpening().equals(Opening.LEFT_OPENED))) {
+
+				return interval.minimum >= minimum
+						&& interval.maximum < maximum;
+
+			} else if ((this.openingType.getOpening().equals(
+					Opening.BOTH_OPENED) && interval.getOpening().equals(
+					Opening.RIGHT_OPENED))
+					|| (this.openingType.getOpening().equals(
+							Opening.LEFT_OPENED) && interval.getOpening()
+							.equals(Opening.UNOPENED))
+					|| (this.openingType.getOpening().equals(
+							Opening.LEFT_OPENED) && interval.openingType
+							.getOpening().equals(Opening.RIGHT_OPENED))) {
+
+				return interval.minimum > minimum
+						&& interval.maximum <= maximum;
+
+			} else
+				return false;
 		}
-		return false;
+
 	}
 
 	public boolean intersectsWith(Interval interval) {
