@@ -29,7 +29,7 @@ public class Interval {
 	}
 
 	public boolean includes(double value) {
-		switch (opening) {
+		switch (this.getOpening()) {
 		case BOTH_OPENED:
 			return value > minimum && value < maximum;
 		case RIGHT_OPENED:
