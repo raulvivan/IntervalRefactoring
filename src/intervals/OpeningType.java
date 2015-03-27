@@ -4,7 +4,7 @@ public abstract class OpeningType {
 	
 	public abstract Opening getOpening();
 	
-	public boolean includes(double value, int minimum, int maximum) {
+	public boolean includes(double value, double minimum, double maximum) {
 		switch (this.getOpening()) {
 		case BOTH_OPENED:
 			return value > minimum && value < maximum;
