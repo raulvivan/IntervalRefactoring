@@ -5,6 +5,7 @@ public class Interval {
 	private double minimum;
 	private double maximum;
 	private Opening opening;
+	private OpeningType openingType;
 	
 	public Interval(Opening opening){
 		this.opening = opening;
