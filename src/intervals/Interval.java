@@ -5,6 +5,18 @@ public class Interval {
 	private double minimum;
 	private double maximum;
 	private Opening opening;
+	
+	public Interval(Opening opening){
+		this.opening = opening;
+	}
+
+	public Opening getOpening() {
+		return opening;
+	}
+
+	public void setOpening(Opening opening) {
+		this.opening = opening;
+	}
 
 	public Interval(double minimum, double maximum, Opening opening) {
 		this.minimum = minimum;
