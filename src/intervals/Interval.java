@@ -10,7 +10,7 @@ public class Interval {
 		this.minimum = minimum;
 		this.maximum = maximum;
 		this.opening = opening;
-	}
+	} 
 
 	public double midPoint() {
 		return (maximum + minimum) / 2;
