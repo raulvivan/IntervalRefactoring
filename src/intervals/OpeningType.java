@@ -9,7 +9,7 @@ public abstract class OpeningType {
 		case BOTH_OPENED:
 			return value > minimum && value < maximum;
 		case RIGHT_OPENED:
-			return value >= minimum && value < maximum;
+			throw new RuntimeException ("Should be being overridden");
 		case LEFT_OPENED:
 			throw new RuntimeException ("Should be being overridden");
 		case UNOPENED:
