@@ -7,7 +7,7 @@ public abstract class OpeningType {
 	public boolean includes(double value, double minimum, double maximum) {
 		switch (this.getOpening()) {
 		case BOTH_OPENED:
-			return value > minimum && value < maximum;
+			throw new RuntimeException ("Should be being overridden");
 		case RIGHT_OPENED:
 			throw new RuntimeException ("Should be being overridden");
 		case LEFT_OPENED:
