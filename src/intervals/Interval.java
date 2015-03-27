@@ -6,16 +6,16 @@ public class Interval {
 	private double maximum;
 	private OpeningType openingType;
 	
-	public Interval(OpeningType openingType){
-		this.openingType = openingType;
+	public Interval(Opening opening){
+		this.openingType = opening.getType();
 	}
 
-	public OpeningType getOpeningType() {
-		return openingType;
+	public Opening getOpening() {
+		return openingType.getOpening();
 	}
 
-	public void setOpeningType(OpeningType openingType) {
-		this.openingType = openingType;
+	public void setOpening(Opening opening) {
+		this.openingType = opening.getType();
 	}
 
 	public Interval(double minimum, double maximum, Opening opening) {
