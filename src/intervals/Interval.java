@@ -4,25 +4,24 @@ public class Interval {
 
 	private double minimum;
 	private double maximum;
-	private Opening opening;
 	private OpeningType openingType;
 	
 	public Interval(Opening opening){
-		this.opening = opening;
+		this.openingType = opening.getType();
 	}
 
 	public Opening getOpening() {
-		return opening;
+		return openingType.getOpening();
 	}
 
 	public void setOpening(Opening opening) {
-		this.opening = opening;
+		this.openingType = opening.getType();
 	}
 
 	public Interval(double minimum, double maximum, Opening opening) {
 		this.minimum = minimum;
 		this.maximum = maximum;
-		this.opening = opening;
+		this.openingType = opening.getType();
 	} 
 
 	public double midPoint() {
@@ -45,12 +44,12 @@ public class Interval {
 	}
 
 	public boolean includes(Interval interval) {
-		if (this.opening.equals(interval.opening)) {
+		if (this.openingType.getOpening().equals(interval.openingType.getOpening())) {
 			return interval.minimum >= minimum && interval.maximum <= maximum;
 		} else {
-			if ((this.opening.equals(Opening.BOTH_OPENED)
-					&& interval.opening.equals(Opening.UNOPENED) || (interval.opening
-					.equals(Opening.BOTH_OPENED) && this.opening
+			if ((this.openingType.getOpening().equals(Opening.BOTH_OPENED)
+					&& interval.openingType.getOpening().equals(Opening.UNOPENED) || (interval.openingType.getOpening()
+					.equals(Opening.BOTH_OPENED) && this.openingType.getOpening()
 					.equals(Opening.UNOPENED)))) {
 				return interval.minimum > minimum && interval.maximum < maximum;
 			}
