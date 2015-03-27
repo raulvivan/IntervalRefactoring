@@ -7,4 +7,11 @@ public class OpeningLeft extends OpeningType{
 		return Opening.LEFT_OPENED;
 	}
 
+	@Override
+	public boolean includes(double value, double minimum, double maximum) {
+		return value > minimum && value <= maximum;
+	}
+	
+	
+
 }
