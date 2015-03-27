@@ -7,4 +7,11 @@ public class OpeningUnopened extends OpeningType{
 		return Opening.UNOPENED;
 	}
 
+	@Override
+	public boolean includes(double value, double minimum, double maximum) {
+		return value >= minimum && value <= maximum;
+	}
+	
+	
+
 }

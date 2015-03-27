@@ -13,7 +13,7 @@ public abstract class OpeningType {
 		case LEFT_OPENED:
 			throw new RuntimeException ("Should be being overridden");
 		case UNOPENED:
-			return value >= minimum && value <= maximum;
+			throw new RuntimeException ("Should be being overridden");
 		default:
 			return false;
 		}
