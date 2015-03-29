@@ -30,7 +30,7 @@ public class Interval {
 
 	public boolean includes(double value) {
 		return openingType.includes(value, minimum, maximum);
-	}
+	} 
 
 	public boolean includes(Interval interval) {
 		if (this.openingType.getOpening().equals(
