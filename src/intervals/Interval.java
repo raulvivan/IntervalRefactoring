@@ -33,36 +33,36 @@ public class Interval {
 	} 
 
 	public boolean includes(Interval interval) {
-		if (this.openingType.getOpening().equals(
-				interval.openingType.getOpening())
+		if (this.getOpening().equals(
+				interval.getOpening())
 				|| this.getOpening().equals(Opening.UNOPENED)
 				|| interval.getOpening().equals(Opening.BOTH_OPENED)) {
 			return interval.minimum >= minimum && interval.maximum <= maximum;
 		} else {
-			if ((this.openingType.getOpening().equals(Opening.BOTH_OPENED) && interval.openingType
+			if ((this.getOpening().equals(Opening.BOTH_OPENED) && interval
 					.getOpening().equals(Opening.UNOPENED))) {
 				return interval.minimum > minimum && interval.maximum < maximum;
-			} else if ((this.openingType.getOpening().equals(
+			} else if ((this.getOpening().equals(
 					Opening.BOTH_OPENED) && interval.getOpening().equals(
 					Opening.LEFT_OPENED))
-					|| (this.openingType.getOpening().equals(
+					|| (this.getOpening().equals(
 							Opening.RIGHT_OPENED) && interval.getOpening()
 							.equals(Opening.UNOPENED))
-					|| (this.openingType.getOpening().equals(
-							Opening.RIGHT_OPENED) && interval.openingType
+					|| (this.getOpening().equals(
+							Opening.RIGHT_OPENED) && interval
 							.getOpening().equals(Opening.LEFT_OPENED))) {
 
 				return interval.minimum >= minimum
 						&& interval.maximum < maximum;
 
-			} else if ((this.openingType.getOpening().equals(
+			} else if ((this.getOpening().equals(
 					Opening.BOTH_OPENED) && interval.getOpening().equals(
 					Opening.RIGHT_OPENED))
-					|| (this.openingType.getOpening().equals(
+					|| (this.getOpening().equals(
 							Opening.LEFT_OPENED) && interval.getOpening()
 							.equals(Opening.UNOPENED))
-					|| (this.openingType.getOpening().equals(
-							Opening.LEFT_OPENED) && interval.openingType
+					|| (this.getOpening().equals(
+							Opening.LEFT_OPENED) && interval
 							.getOpening().equals(Opening.RIGHT_OPENED))) {
 
 				return interval.minimum > minimum
