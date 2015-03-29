@@ -6,6 +6,14 @@ public class Interval {
 	private double maximum;
 	private OpeningType openingType;
 
+	public double getMinimum() {
+		return minimum;
+	}
+
+	public double getMaximum() {
+		return maximum;
+	}
+
 	public Interval(Opening opening) {
 		this.openingType = opening.getType();
 	}
