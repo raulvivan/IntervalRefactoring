@@ -11,6 +11,11 @@ public class OpeningRight extends OpeningType{
 	public boolean includes(double value, double minimum, double maximum) {
 		return value >= minimum && value < maximum;
 	}
+
+	@Override
+	public boolean includes(Interval interval, Interval mainInterval) {
+		return super.includes(interval, mainInterval);
+	}
 	
 	
 
