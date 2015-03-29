@@ -14,7 +14,18 @@ public class OpeningOpened extends OpeningType{
 
 	@Override
 	public boolean includes(Interval interval, Interval mainInterval) {
-		return super.includes(interval, mainInterval);
+		switch(interval.getOpening()){
+		case BOTH_OPENED:
+			return interval.getMinimum()>= mainInterval.getMinimum() && interval.getMaximum() <= mainInterval.getMaximum();
+		case UNOPENED:
+			return interval.getMinimum() > mainInterval.getMinimum() && interval.getMaximum() < mainInterval.getMaximum();
+		case RIGHT_OPENED:
+			return interval.getMinimum() > mainInterval.getMinimum() && interval.getMaximum() <= mainInterval.getMaximum();
+		case LEFT_OPENED:
+			return interval.getMinimum() >= mainInterval.getMinimum() && interval.getMaximum() < mainInterval.getMaximum();
+		default:
+			return false;
+		}
 	}
 	
 	
