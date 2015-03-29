@@ -41,44 +41,7 @@ public class Interval {
 	} 
 
 	public boolean includes(Interval interval) {
-		if (this.getOpening().equals(
-				interval.getOpening())
-				|| this.getOpening().equals(Opening.UNOPENED)
-				|| interval.getOpening().equals(Opening.BOTH_OPENED)) {
-			return interval.minimum >= minimum && interval.maximum <= maximum;
-		} else {
-			if ((this.getOpening().equals(Opening.BOTH_OPENED) && interval
-					.getOpening().equals(Opening.UNOPENED))) {
-				return interval.minimum > minimum && interval.maximum < maximum;
-			} else if ((this.getOpening().equals(
-					Opening.BOTH_OPENED) && interval.getOpening().equals(
-					Opening.LEFT_OPENED))
-					|| (this.getOpening().equals(
-							Opening.RIGHT_OPENED) && interval.getOpening()
-							.equals(Opening.UNOPENED))
-					|| (this.getOpening().equals(
-							Opening.RIGHT_OPENED) && interval
-							.getOpening().equals(Opening.LEFT_OPENED))) {
-
-				return interval.minimum >= minimum
-						&& interval.maximum < maximum;
-
-			} else if ((this.getOpening().equals(
-					Opening.BOTH_OPENED) && interval.getOpening().equals(
-					Opening.RIGHT_OPENED))
-					|| (this.getOpening().equals(
-							Opening.LEFT_OPENED) && interval.getOpening()
-							.equals(Opening.UNOPENED))
-					|| (this.getOpening().equals(
-							Opening.LEFT_OPENED) && interval
-							.getOpening().equals(Opening.RIGHT_OPENED))) {
-
-				return interval.minimum > minimum
-						&& interval.maximum <= maximum;
-
-			} else
-				return false;
-		}
+		return this.openingType.includes(interval, this);
 
 	}
 
