@@ -40,7 +40,7 @@ public class OpeningOpened extends OpeningType{
 
 	@Override
 	public Punto asignarMaximo(double value) {
-		return null;
+		return new NoIncluye(value);
 	}
 	
 	

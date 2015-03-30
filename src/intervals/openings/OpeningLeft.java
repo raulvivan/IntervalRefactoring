@@ -2,6 +2,7 @@ package intervals.openings;
 
 import intervals.Interval;
 import intervals.Opening;
+import intervals.puntos.Incluye;
 import intervals.puntos.NoIncluye;
 import intervals.puntos.Punto;
 
@@ -40,7 +41,7 @@ public class OpeningLeft extends OpeningType{
 
 	@Override
 	public Punto asignarMaximo(double value) {
-		return null;
+		return new Incluye(value);
 	}
 	
 	

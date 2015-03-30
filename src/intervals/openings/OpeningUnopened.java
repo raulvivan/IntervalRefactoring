@@ -29,7 +29,7 @@ public class OpeningUnopened extends OpeningType{
 
 	@Override
 	public Punto asignarMaximo(double value) {
-		return null;
+		return new Incluye(value);
 	}
 	
 	
