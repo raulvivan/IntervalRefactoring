@@ -2,8 +2,8 @@ package intervals;
 
 public class Interval {
 
-	private double minimum;
-	private double maximum;
+	private Punto minimum;
+	private Punto maximum;
 	private OpeningType openingType;
 
 	public double getMinimum() {
