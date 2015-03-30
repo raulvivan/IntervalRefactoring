@@ -8,6 +8,14 @@ public class Interval {
 	private Punto minimum;
 	private Punto maximum;
 	private OpeningType openingType;
+	
+	public Punto getMinimum() {
+		return minimum;
+	}
+
+	public Punto getMaximum() {
+		return maximum;
+	}
 
 	public double getMinimumValue() {
 		return minimum.getValue();
