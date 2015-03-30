@@ -6,9 +6,6 @@ public class Interval {
 	private Punto maximum;
 	private OpeningType openingType;
 
-	public double getMinimum() {
-		return this.getMinimumValue();
-	} 
 	public double getMinimumValue() {
 		return minimum.getValue();
 	} 
