@@ -25,6 +25,8 @@ public abstract class Punto {
 	
 	public abstract boolean compararMaximos(Incluye incluye);
 	
-	public abstract boolean compararMaximos(NoIncluye noIncluye);
+	public boolean compararMaximos(NoIncluye noIncluye) {
+		return this.getValue() >= noIncluye.getValue();
+	}
 
 }
