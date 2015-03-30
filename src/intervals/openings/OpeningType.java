@@ -1,4 +1,7 @@
-package intervals;
+package intervals.openings;
+
+import intervals.Interval;
+import intervals.Opening;
 
 public abstract class OpeningType {
 

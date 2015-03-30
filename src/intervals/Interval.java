@@ -1,5 +1,8 @@
 package intervals;
 
+import intervals.openings.OpeningType;
+import intervals.puntos.Punto;
+
 public class Interval {
 
 	private Punto minimum;

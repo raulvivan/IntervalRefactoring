@@ -1,4 +1,7 @@
-package intervals;
+package intervals.openings;
+
+import intervals.Interval;
+import intervals.Opening;
 
 public class OpeningUnopened extends OpeningType{
 

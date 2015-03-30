@@ -1,4 +1,4 @@
-package intervals;
+package intervals.puntos;
 
 public class Punto {
 	

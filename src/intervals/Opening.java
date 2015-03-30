@@ -1,5 +1,11 @@
 package intervals;
 
+import intervals.openings.OpeningLeft;
+import intervals.openings.OpeningOpened;
+import intervals.openings.OpeningRight;
+import intervals.openings.OpeningType;
+import intervals.openings.OpeningUnopened;
+
 public enum Opening {
 	
 	LEFT_OPENED{
