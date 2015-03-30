@@ -52,7 +52,7 @@ public class Interval {
 	} 
 
 	public boolean includes(Interval interval) {
-		return this.openingType.includes(interval, this);
+		return this.minimum.compararMinimos(interval.getMinimum()) && this.maximum.compararMaximos(interval.getMaximum());
 
 	}
 
