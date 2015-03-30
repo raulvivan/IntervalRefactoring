@@ -7,11 +7,11 @@ public class Interval {
 	private OpeningType openingType;
 
 	public double getMinimum() {
-		return minimum;
+		return minimum.getValue();
 	} 
 
 	public double getMaximum() {
-		return maximum;
+		return maximum.getValue();
 	}
 
 	public Interval(Opening opening) {
@@ -27,17 +27,17 @@ public class Interval {
 	}
 
 	public Interval(double minimum, double maximum, Opening opening) {
-		this.minimum = minimum;
-		this.maximum = maximum;
+		this.minimum = new Punto(minimum);
+		this.maximum = new Punto(maximum);
 		this.openingType = opening.getType();
 	}
 
 	public double midPoint() {
-		return (maximum + minimum) / 2;
+		return (maximum.getValue() + minimum.getValue()) / 2;
 	}
 
 	public boolean includes(double value) {
-		return openingType.includes(value, minimum, maximum);
+		return openingType.includes(value, minimum.getValue(), maximum.getValue());
 	} 
 
 	public boolean includes(Interval interval) {
