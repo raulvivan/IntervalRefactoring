@@ -26,9 +26,9 @@ public class Interval {
 		this.openingType = opening.getType();
 	}
 
-	public Interval(double minimum, double maximum, Opening opening) {
-		this.minimum = new Punto(minimum);
-		this.maximum = new Punto(maximum);
+	public Interval(double minimumValue, double maximumValue, Opening opening) {
+		this.minimum = new Punto(minimumValue);
+		this.maximum = new Punto(maximumValue);
 		this.openingType = opening.getType();
 	}
 
