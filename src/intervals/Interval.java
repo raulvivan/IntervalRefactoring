@@ -11,6 +11,10 @@ public class Interval {
 	} 
 
 	public double getMaximum() {
+		return this.getMaximumValue();
+	}
+	
+	public double getMaximumValue(){
 		return maximum.getValue();
 	}
 
