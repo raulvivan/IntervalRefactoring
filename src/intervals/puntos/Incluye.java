@@ -8,17 +8,17 @@ public class Incluye extends Punto{
 
 	@Override
 	public boolean compararMinimos(Punto punto) {
-		return false;
+		return punto.compararMinimos(this);
 	}
 
 	@Override
 	public boolean compararMinimos(Incluye incluye) {
-		return false;
+		return this.getValue() <= incluye.getValue();
 	}
 
 	@Override
 	public boolean compararMinimos(NoIncluye noIncluye) {
-		return false;
+		return this.getValue() <= noIncluye.getValue();
 	}
 
 }
