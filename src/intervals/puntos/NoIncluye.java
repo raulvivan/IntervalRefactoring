@@ -26,9 +26,4 @@ public class NoIncluye extends Punto{
 		return this.getValue() > incluye.getValue();
 	}
 
-	@Override
-	public boolean compararMaximos(NoIncluye noIncluye) {
-		return this.getValue() >= noIncluye.getValue();
-	}
-
 }
