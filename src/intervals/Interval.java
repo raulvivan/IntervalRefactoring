@@ -8,7 +8,7 @@ public class Interval {
 
 	public double getMinimum() {
 		return minimum;
-	}
+	} 
 
 	public double getMaximum() {
 		return maximum;
