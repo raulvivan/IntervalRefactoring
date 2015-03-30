@@ -32,7 +32,7 @@ public class Interval {
 	public Interval(double minimumValue, double maximumValue, Opening opening) {
 		this.openingType = opening.getType();
 		this.minimum = openingType.asignarMinimo(minimumValue);
-		this.maximum = new Punto(maximumValue);
+		this.maximum = openingType.asignarMaximo(maximumValue);
 	}
 
 	public double midPoint() {
