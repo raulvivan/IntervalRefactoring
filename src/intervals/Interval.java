@@ -7,6 +7,9 @@ public class Interval {
 	private OpeningType openingType;
 
 	public double getMinimum() {
+		return this.getMinimumValue();
+	} 
+	public double getMinimumValue() {
 		return minimum.getValue();
 	} 
 
