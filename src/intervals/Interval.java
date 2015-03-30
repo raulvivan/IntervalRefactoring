@@ -30,9 +30,9 @@ public class Interval {
 	}
 
 	public Interval(double minimumValue, double maximumValue, Opening opening) {
-		this.minimum = new Punto(minimumValue);
-		this.maximum = new Punto(maximumValue);
 		this.openingType = opening.getType();
+		this.minimum = openingType.asignarMinimo(minimumValue);
+		this.maximum = new Punto(maximumValue);
 	}
 
 	public double midPoint() {
