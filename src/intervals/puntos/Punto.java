@@ -1,6 +1,6 @@
 package intervals.puntos;
 
-public class Punto {
+public abstract class Punto {
 	
 	private final double value;
 
@@ -12,6 +12,12 @@ public class Punto {
 	public double getValue() {
 		return value;
 	}
+	
+	public abstract boolean compararMinimos(Punto punto);
+	
+	public abstract boolean compararMinimos(Incluye incluye);
+	
+	public abstract boolean compararMinimos(NoIncluye noIncluye);
 	
 	
 
