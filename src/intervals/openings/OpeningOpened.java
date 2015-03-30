@@ -2,6 +2,7 @@ package intervals.openings;
 
 import intervals.Interval;
 import intervals.Opening;
+import intervals.puntos.Punto;
 
 public class OpeningOpened extends OpeningType{
 
@@ -29,6 +30,11 @@ public class OpeningOpened extends OpeningType{
 		default:
 			return false;
 		}
+	}
+
+	@Override
+	public Punto asignarMinimo(double value) {
+		return null;
 	}
 	
 	

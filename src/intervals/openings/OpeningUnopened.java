@@ -2,6 +2,7 @@ package intervals.openings;
 
 import intervals.Interval;
 import intervals.Opening;
+import intervals.puntos.Punto;
 
 public class OpeningUnopened extends OpeningType{
 
@@ -18,6 +19,11 @@ public class OpeningUnopened extends OpeningType{
 	@Override
 	public boolean includes(Interval interval, Interval mainInterval) {
 		return interval.getMinimumValue()>= mainInterval.getMinimumValue() && interval.getMaximumValue() <= mainInterval.getMaximumValue();
+	}
+
+	@Override
+	public Punto asignarMinimo(double value) {
+		return null;
 	}
 	
 	
