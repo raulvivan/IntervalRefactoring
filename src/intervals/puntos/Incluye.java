@@ -13,7 +13,12 @@ public class Incluye extends Punto{
 
 	@Override
 	public boolean compararMinimos(Incluye incluye) {
-		return this.getValue() <= incluye.getValue();
+		return incluye.getValue() <= this.getValue();
+	}
+
+	@Override
+	public boolean compararMinimos(NoIncluye noIncluye){
+		return noIncluye.getValue() < this.getValue();
 	}
 
 	@Override
@@ -23,7 +28,12 @@ public class Incluye extends Punto{
 
 	@Override
 	public boolean compararMaximos(Incluye incluye) {
-		return this.getValue() >= incluye.getValue();
+		return incluye.getValue() >= this.getValue();
+	}
+
+	@Override
+	public boolean compararMaximos(NoIncluye noIncluye) {
+		return noIncluye.getValue() > this.getValue();
 	}
 
 }

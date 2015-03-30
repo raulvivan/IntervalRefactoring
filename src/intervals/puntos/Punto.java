@@ -17,16 +17,11 @@ public abstract class Punto {
 	
 	public abstract boolean compararMinimos(Incluye incluye);
 	
-	public boolean compararMinimos(NoIncluye noIncluye){
-		return this.getValue() <= noIncluye.getValue();
-	}
+	public abstract boolean compararMinimos(NoIncluye noIncluye);
 	
 	public abstract boolean compararMaximos(Punto punto);
 	
 	public abstract boolean compararMaximos(Incluye incluye);
 	
-	public boolean compararMaximos(NoIncluye noIncluye) {
-		return this.getValue() >= noIncluye.getValue();
-	}
-
+	public abstract boolean compararMaximos(NoIncluye noIncluye);
 }
