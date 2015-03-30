@@ -16,13 +16,13 @@ public class OpeningRight extends OpeningType{
 	public boolean includes(Interval interval, Interval mainInterval) {
 		switch(interval.getOpening()){
 		case BOTH_OPENED:
-			return interval.getMinimumValue() >= mainInterval.getMinimumValue() && interval.getMaximum() <= mainInterval.getMaximum();
+			return interval.getMinimumValue() >= mainInterval.getMinimumValue() && interval.getMaximumValue() <= mainInterval.getMaximumValue();
 		case UNOPENED:
-			return interval.getMinimumValue() >= mainInterval.getMinimumValue() && interval.getMaximum() < mainInterval.getMaximum();
+			return interval.getMinimumValue() >= mainInterval.getMinimumValue() && interval.getMaximumValue() < mainInterval.getMaximumValue();
 		case LEFT_OPENED:
-			return interval.getMinimumValue() >= mainInterval.getMinimumValue() && interval.getMaximum() < mainInterval.getMaximum();
+			return interval.getMinimumValue() >= mainInterval.getMinimumValue() && interval.getMaximumValue() < mainInterval.getMaximumValue();
 		case RIGHT_OPENED:
-			return interval.getMinimumValue() >= mainInterval.getMinimumValue() && interval.getMaximum() <= mainInterval.getMaximum();
+			return interval.getMinimumValue() >= mainInterval.getMinimumValue() && interval.getMaximumValue() <= mainInterval.getMaximumValue();
 		default:
 			return false;
 		}
