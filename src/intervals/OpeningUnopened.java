@@ -14,7 +14,7 @@ public class OpeningUnopened extends OpeningType{
 
 	@Override
 	public boolean includes(Interval interval, Interval mainInterval) {
-		return interval.getMinimumValue()>= mainInterval.getMinimumValue() && interval.getMaximum() <= mainInterval.getMaximum();
+		return interval.getMinimumValue()>= mainInterval.getMinimumValue() && interval.getMaximumValue() <= mainInterval.getMaximumValue();
 	}
 	
 	

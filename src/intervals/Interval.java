@@ -9,10 +9,6 @@ public class Interval {
 	public double getMinimumValue() {
 		return minimum.getValue();
 	} 
-
-	public double getMaximum() {
-		return this.getMaximumValue();
-	}
 	
 	public double getMaximumValue(){
 		return maximum.getValue();
