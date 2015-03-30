@@ -17,7 +17,9 @@ public abstract class Punto {
 	
 	public abstract boolean compararMinimos(Incluye incluye);
 	
-	public abstract boolean compararMinimos(NoIncluye noIncluye);
+	public boolean compararMinimos(NoIncluye noIncluye){
+		return this.getValue() <= noIncluye.getValue();
+	}
 	
 	
 
