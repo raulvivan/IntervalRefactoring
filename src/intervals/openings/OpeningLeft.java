@@ -37,6 +37,11 @@ public class OpeningLeft extends OpeningType{
 	public Punto asignarMinimo(double value) {
 		return new NoIncluye(value);
 	}
+
+	@Override
+	public Punto asignarMaximo(double value) {
+		return null;
+	}
 	
 	
 

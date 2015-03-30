@@ -14,5 +14,7 @@ public abstract class OpeningType {
 	public abstract boolean includes(Interval interval, Interval mainInterval);
 	
 	public abstract Punto asignarMinimo(double value);
+	
+	public abstract Punto asignarMaximo(double value);
 
 }
